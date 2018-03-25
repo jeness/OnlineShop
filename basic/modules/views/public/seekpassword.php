@@ -1,15 +1,14 @@
 <?php
-use yii\bootstrap\ActiveForm;  //帮助创建一个form
-use yii\helpers\Html; //帮助生成一个提交按钮
+    use yii\bootstrap\ActiveForm;
+    use yii\helpers\Html;
 ?>
-
 <!DOCTYPE html>
 <html class="login-bg">
 <head>
-    <title>慕课商城 - 找回密码</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+	<title>慕课商城 - 后台管理</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
     <!-- bootstrap -->
     <link href="assets/admin/css/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="assets/admin/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
@@ -22,75 +21,62 @@ use yii\helpers\Html; //帮助生成一个提交按钮
 
     <!-- libraries -->
     <link rel="stylesheet" type="text/css" href="assets/admin/css/lib/font-awesome.css" />
-
+    
     <!-- this page specific styles -->
     <link rel="stylesheet" href="assets/admin/css/compiled/signin.css" type="text/css" media="screen" />
 
     <!-- open sans font -->
-<!--    <link href='http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />-->
 
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 
 
-<div class="row-fluid login-wrapper">
-    <a class="brand" href="index.html"></a>
-    <?php $form = ActiveForm::begin(
-        [
+    <div class="row-fluid login-wrapper">
+        <a class="brand" href="index.html"></a>
+        <?php $form = ActiveForm::begin([
             'fieldConfig' => [
-                'template' => '{error}{input}', //两者前后决定网页中显示的位置
+                'template' => '{error}{input}',
             ],
-        ]
-    ); ?>
-    <div class="span4 box">
-        <div class="content-wrap">
-            <h6>慕课商城 - 找回密码</h6>
-             <?php if(Yii::$app->session->hasFlash('info')){
-                echo Yii::$app->session->getFlash('info');
-             }?>
-             <?php echo $form->field($model, 'adminuser')->textInput(["class" => "span12", "placeholder" => "管理员账号"]); ?>
-             <?php echo $form->field($model, 'adminemail')->textInput(["class" => "span12", "placeholder" => "管理员电子邮箱"]); ?>
-
-<!--            <input class="span12" type="text" placeholder="管理员账号" />-->
-<!--            <input class="span12" type="password" placeholder="管理员密码" />-->
-            <a href="<?php echo yii\helpers\Url::to(['public/login'])?>" class="forgot">返回登录</a>
-            <?php echo Html::submitButton('找回密码', ["class" => "btn-glow primary login"]); ?>
+        ]); ?>
+        <div class="span4 box">
+            <div class="content-wrap">
+                <h6>慕课商城 - 找回密码</h6>
+                <?php if (Yii::$app->session->hasFlash('info')) {
+                    echo Yii::$app->session->getFlash('info');
+                } ?>
+                <?php echo $form->field($model, 'adminuser')->textInput(["class" => "span12", "placeholder" => "管理员账号"]); ?>
+                <?php echo $form->field($model, 'adminemail')->textInput(["class" => "span12", "placeholder" => "管理员电子邮箱"]); ?>
+                <a href="<?php echo yii\helpers\Url::to(['public/login']); ?>" class="forgot">返回登录</a>
+                <?php echo Html::submitButton('找回密码', ["class" => "btn-glow primary login"]); ?>
+            </div>
         </div>
+        <?php ActiveForm::end(); ?>
     </div>
-    <?php ActiveForm::end();?>
-<!--    <div class="span4 no-account">-->
-<!--        <p>没有账户?</p>-->
-<!--        <a href="signup.html">注册</a>-->
-<!--    </div>-->
-        <div class="span4 no-account">
-            <p>管理员账号:admin 密码:123</p>
-        </div>
-</div>
 
-<!-- scripts -->
-<script src="assets/admin/js/jquery-latest.js"></script>
-<script src="assets/admin/js/bootstrap.min.js"></script>
-<script src="assets/admin/js/theme.js"></script>
+	<!-- scripts -->
+    <script src="assets/admin/js/jquery-latest.js"></script>
+    <script src="assets/admin/js/bootstrap.min.js"></script>
+    <script src="assets/admin/js/theme.js"></script>
 
-<!-- pre load bg imgs -->
-<script type="text/javascript">
-    $(function () {
-        // bg switcher
-        var $btns = $(".bg-switch .bg");
-        $btns.click(function (e) {
-            e.preventDefault();
-            $btns.removeClass("active");
-            $(this).addClass("active");
-            var bg = $(this).data("img");
+    <!-- pre load bg imgs -->
+    <script type="text/javascript">
+        $(function () {
+            // bg switcher
+            var $btns = $(".bg-switch .bg");
+            $btns.click(function (e) {
+                e.preventDefault();
+                $btns.removeClass("active");
+                $(this).addClass("active");
+                var bg = $(this).data("img");
 
-            $("html").css("background-image", "url('img/bgs/" + bg + "')");
+                $("html").css("background-image", "url('img/bgs/" + bg + "')");
+            });
+
         });
-
-    });
-</script>
+    </script>
 
 </body>
 </html>

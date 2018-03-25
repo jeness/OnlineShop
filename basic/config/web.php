@@ -10,7 +10,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'FOOIfkz1Y4Irk_gvh4uf7bcoFRRixk77',
+            'cookieValidationKey' => 'q6ga0ArPuP1iWsey2H6aoeWsP7G98FnL',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -35,7 +35,8 @@ $config = [
                 'password' => '666795,.yu',
                 'port' => '465',
                 'encryption' => 'ssl',
-          ],
+            ],
+
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -69,7 +70,7 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
-        'allowedIPs' =>['127.0.0.1'],
+        'allowedIPs' => ['127.0.0.1'],
     ];
     $config['modules']['admin'] = [
         'class' => 'app\modules\admin',

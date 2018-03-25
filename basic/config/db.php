@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2shop', //数据源名称
+    'dsn' => 'mysql:host=localhost;dbname=yii2shop',
     'username' => 'root',
     'password' => 'root123',
     'charset' => 'utf8',
-    'tablePrefix'=> 'shop_',
+    'tablePrefix' => 'shop_',
 ];

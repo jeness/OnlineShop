@@ -5,7 +5,7 @@
         <div class="col-xs-12 no-margin">
             <section id="shipping-address" style="margin-bottom:100px;margin-top:-10px">
                 <h2 class="border h1">收货地址</h2>
-                <a href="#" id="createlink">新建联系人</a>
+                    <a href="#" id="createlink">新建联系人</a>
                 <form>
                     <div class="row field-row" style="margin-top:10px">
                         <div class="col-xs-12">
@@ -19,10 +19,10 @@
                             <a class="simple-link bold" href="#">北京市朝阳区酒仙桥北路</a>
                         </div>
                     </div><!-- /.field-row -->
-
+                
                 </form>
             </section><!-- /#shipping-address -->
-
+            
             <div class="billing-address" style="display:none;">
                 <h2 class="border h1">新建联系人</h2>
                 <form>
@@ -171,24 +171,25 @@
                         <input class="le-radio" type="radio" name="group2" value="Direct">
                         <div class="radio-label bold ">微信支付</div>
                     </div><!-- /.payment-method-option -->
-
+                    
                     <div class="payment-method-option">
                         <input class="le-radio" type="radio" name="group2" value="cheque">
                         <div class="radio-label bold ">支付宝支付</div>
                     </div><!-- /.payment-method-option -->
-
+                    
                     <div class="payment-method-option">
                         <input class="le-radio" type="radio" name="group2" value="paypal">
                         <div class="radio-label bold ">网银支付</div>
                     </div><!-- /.payment-method-option -->
                 </form>
             </div><!-- /#payment-method-options -->
-
+            
             <div class="place-order-button">
                 <button class="le-button big">确认订单</button>
             </div><!-- /.place-order-button -->
 
         </div><!-- /.col -->
-    </div><!-- /.container -->
+    </div><!-- /.container -->    
 </section><!-- /#checkout-page -->
 <!-- ========================================= CONTENT : END ========================================= -->		<!-- ============================================================= FOOTER ============================================================= -->
+
